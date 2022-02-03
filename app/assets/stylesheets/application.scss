@@ -1,0 +1,35 @@
+@import "header";
+@import "session";
+
+html {
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  height: 100%;
+  font-family: Avenir;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+}
+
+hr {
+  position: absolute;
+  width: 414px;
+  height: 1px;
+  left: 0px;
+  top: 58px;
+
+  background: #000000;
+  mix-blend-mode: normal;
+  opacity: 0.1;
+}
+
+.container {
+  margin: 0 26px;
+  margin-top: 33px;
+}
