@@ -1,6 +1,7 @@
 @import "header";
 @import "session";
-
+@import "boards";
+@import "cards";
 html {
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -15,6 +16,7 @@ html {
 
 body {
   margin: 0;
+  width: 100%;
 }
 
 hr {

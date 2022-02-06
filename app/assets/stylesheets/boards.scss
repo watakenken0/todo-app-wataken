@@ -1,0 +1,34 @@
+// Place all the styles related to the boards controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.title {
+  height: 36px;
+
+  font-family: Avenir;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 36px;
+  padding-bottom: 29px;
+  color: #000000;
+}
+
+.content-title {
+  padding-bottom: 8px;
+  font-size: 18px;
+}
+
+.content-title1 {
+  padding-top: 33px;
+  padding-bottom: 8px;
+  font-size: 18px;
+}
+
+.text-area {
+  width: 362px;
+  height: 203px;
+  left: 26px;
+  border-radius: 4px;
+  background: #f4f4f4;
+  border: none;
+}

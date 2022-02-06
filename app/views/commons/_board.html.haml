@@ -1,0 +1,12 @@
+.card-detail
+  .card-title
+    = board.name
+  .card-description
+    = board.description
+  %div
+    - if user_signed_in? && current_user.has_written?(board)
+      .dropdown
+        = image_tag 'actions.svg', class: 'dropbtn'
+        .dropdown-content
+          = link_to 'Edit', edit_board_path(board),class:"a"
+          = link_to 'Delete', board_path(board), data: { method: 'delete', confirm: '本当に削除してもいいですか？'},class:"a"

@@ -7,18 +7,18 @@
     = csp_meta_tag
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
-    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %meta{:content => "width=device-width,initial-scale=1.0,minimum-scale=1.0", :name => "viewport"}/
 
   %body
   %header.header
     .header-logo
-      %p.pageTitle= link_to 'Boards'
+      %p.pageTitle
+        = link_to 'Boards', root_path, class:"PageTitle"
       - if user_signed_in?
         .dropdown
-          = image_tag current_user.avatar_image, class: 'header_avatar dropbtn'
+          -# = image_tag current_user.avatar_image, class: 'header_avatar dropbtn'
           .dropdown-content
-            = link_to 'Profile',profile_path
-            = link_to 'Logout', destroy_user_session_path, data: { method: 'delete' }
+            = link_to 'Logout', destroy_user_session_path, data: { method: 'delete' }, class:"header_loginBtn"
       - else
         = link_to 'Login', new_user_session_path, class:'header_loginBtn'
     %hr/
