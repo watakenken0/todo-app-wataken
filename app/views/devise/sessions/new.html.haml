@@ -11,3 +11,5 @@
       = f.password_field :password, autocomplete: "current-password", class: "text"
     .actions
       = f.submit "submit", class: 'btn-primary'
+    .field
+      = link_to "sign_up", new_user_registration_path, class:"registration"
