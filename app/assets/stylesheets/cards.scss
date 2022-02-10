@@ -3,8 +3,8 @@
 }
 
 .card-detail {
-  width: 362px;
-  height: 161px;
+  width: 100%;
+  height: 100%;
   background: #f4f4f4;
   border-radius: 10px;
   margin-bottom: 26px;
@@ -31,17 +31,25 @@
 
 .dropdown {
   position: relative;
-  display: inline-block;
-  left: 300px;
+  display: block;
+  float: right;
+}
+
+.a1 {
+  padding-top: 30px;
+  padding-right: 11px;
 }
 
 .dropdown-content {
   font-weight: normal;
+  right: 0;
+  position: absolute;
   display: none;
   background-color: white;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
   border-radius: 10px;
+  margin: 0 0 0 auto;
 }
 
 .dropdown-content a {
@@ -59,4 +67,32 @@
   display: block;
   top: 20px;
   color: black;
+}
+.new {
+  width: 100%;
+  display: table;
+}
+
+.new-board {
+  text-decoration: none;
+  color: black;
+  background: #ffffff;
+  border: 1px dashed rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  height: 160px;
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+  font-size: 18px;
+}
+
+.user-image {
+  height: 30px;
+  width: 30px;
+  padding-top: 29px;
+  padding-left: 20px;
+}
+
+.cards {
+  display: none;
 }

@@ -1,5 +1,5 @@
 class BoardsController < ApplicationController
-  #before_action :authenticate_user!, only: [:new, :create,:edit, :update, :destroy]
+  before_action :authenticate_user!
 
   def index
     @boards = Board.all
@@ -10,7 +10,7 @@ class BoardsController < ApplicationController
   end
 
   def new
-    @board = Board.new
+    @board = current_user.boards.build
   end
 
   def create
@@ -30,7 +30,7 @@ class BoardsController < ApplicationController
   def update
     @board = current_user.boards.find(params[:id])
     if @board.update(board_params)
-      redirect_to board_path(@article), notice: '更新できました'
+      redirect_to boards_path, notice: '更新できました'
     else
       flash.now[:error] = '更新できませんでした'
       render :edit
